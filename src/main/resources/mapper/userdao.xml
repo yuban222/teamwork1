@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dp.teamwork1.dao.userdao">
+
+    <insert id="add">
+        insert into teamwork1.user (id, username, password, phonenumber)
+        values (null,#{username},#{password},#{phonenumber});
+    </insert>
+
+    <select id="login" resultType="java.lang.Boolean">
+        select *
+        from teamwork1.user where username=#{username} and password=#{password};
+    </select>
+</mapper>

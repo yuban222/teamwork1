@@ -1,0 +1,27 @@
+spring:
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql:///teamwork1?useSSL=false&allowPublicKeyRetrieval=true
+  username: root
+  password: "20040925"
+  type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+ mapper-locations: classpath:mapper/*.xml
+ type-aliases-package: com.dp.teamwork1.dao
+
+logging:
+ level:
+  com.dp.dao: debug
+
+pagehelper:
+ helper-dialect: mysql
+ reasonable: true
+ support-methods-arguments: true
+ params: count = countsql
+
+ thymeleaf:
+  check-template: false
+  check-template-location: false
+
+
